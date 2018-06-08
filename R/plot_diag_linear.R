@@ -148,13 +148,13 @@ diag_reqq <- function(model, dot.size) {
     facet_wrap(~ ind, scales = "free") +
     labs(x = "Standard normal quantiles", y = "Random effect quantiles") +
     geom_intercept_line2(0, NULL) +
-    stat_smooth(method = "lm", alpha = alpha) +
+    stat_smooth(method = "lm", alpha = alpha, colour = "black") +
     geom_errorbar(
       aes_string(ymin = "conf.low", ymax = "conf.high"),
       width = 0,
       colour = "black"
     ) +
-    geom_point(size = dot.size, colour = "darkblue")
+    geom_point(size = dot.size, colour = "black")
 }
 
 
