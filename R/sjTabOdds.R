@@ -607,7 +607,7 @@ sjt.glm <- function(...,
   # -------------------------------------
   if (lmerob) {
     # css attribute "topcontentborder" already in this table row
-    page.content <- paste0(page.content, sprintf("  <tr>\n    <td colspan=\"%i\" class=\"tdata leftalign topcontentborder fixedparts\">Fixed Parts</td>\n  </tr>\n", headerColSpan + 1))
+    page.content <- paste0(page.content, sprintf("  <tr>\n    <td colspan=\"%i\" class=\"tdata leftalign topcontentborder fixedparts\">Fixed Effects</td>\n  </tr>\n", headerColSpan + 1))
     # so it's not needed for intercept row
     tcb_class <- ""
   } else {
@@ -767,7 +767,7 @@ sjt.glm <- function(...,
   # -------------------------------------
   if (lmerob) {
     # css attribute "topcontentborder" already in this table row
-    page.content <- paste0(page.content, sprintf("  <tr>\n    <td colspan=\"%i\" class=\"tdata summary leftalign randomparts\">Random Parts</td>\n  </tr>\n", headerColSpan + 1))
+    page.content <- paste0(page.content, sprintf("  <tr>\n    <td colspan=\"%i\" class=\"tdata summary leftalign randomparts\">Random Effects</td>\n  </tr>\n", headerColSpan + 1))
     # -------------------------------------
     # we need to know max amount of groups
     # -------------------------------------
