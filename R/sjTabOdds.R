@@ -326,7 +326,7 @@ sjt.glm <- function(...,
           # remove non-transformed standard error
           dplyr::select_("-statistic", "-std.error") %>%
           # and add adjusted standard errors
-          dplyr::mutate(std.error = sjstats::se(fit)[["std.error"]])
+          dplyr::mutate(std.error = as.numeric(unlist(sjstats::se(fit))))
 
         # reorder df
         fit.df <- fit.df[, c(1:2, 6, 3:5)]
